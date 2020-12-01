@@ -1,0 +1,37 @@
+.navbar {
+  background: white;
+  width: 100%;
+  position: fixed;
+}
+
+.navbar .nav-links {
+  margin: auto;
+  width: 85%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar .nav-links .nav-link {
+  padding: 1vh 0;
+}
+
+.navbar .nav-links .nav-link p {
+  color: #555555;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar .nav-links .nav-link p:hover {
+  color: #d65555;
+}
+/*# sourceMappingURL=Nav.css.map */
