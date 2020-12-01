@@ -1,7 +1,15 @@
 .navbar {
   background: white;
   width: 100%;
+  height: 6vh;
   position: fixed;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar .nav-links {
@@ -16,13 +24,14 @@
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  list-style: none;
 }
 
 .navbar .nav-links .nav-link {
-  padding: 1vh 0;
+  text-decoration: none;
 }
 
-.navbar .nav-links .nav-link p {
+.navbar .nav-links .nav-link li {
   color: #555555;
   font-weight: 600;
   font-size: 1.2rem;
@@ -31,7 +40,7 @@
   transition: 0.3s;
 }
 
-.navbar .nav-links .nav-link p:hover {
+.navbar .nav-links .nav-link li:hover {
   color: #d65555;
 }
 /*# sourceMappingURL=Nav.css.map */

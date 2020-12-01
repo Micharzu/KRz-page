@@ -1,7 +1,12 @@
 .navbar {
   background: white;
   width: 100%;
+  height: 6vh;
   position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
 
   .nav-links {
     margin: auto;
@@ -11,10 +16,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    list-style: none;
     .nav-link {
-      padding: 1vh 0;
-
-      p {
+      text-decoration: none;
+      li {
         color: rgb(85, 85, 85);
         font-weight: 600;
         font-size: 1.2rem;
@@ -22,6 +27,8 @@
         transition: 0.3s;
         &:hover {
           color: rgb(214, 85, 85);
+        }
+        a {
         }
       }
     }
