@@ -1,7 +1,19 @@
 .footer {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   background: black;
   width: 100%;
-  height: 6vh;
+  height: 8vh;
+  min-height: 40px;
+  .copyrights {
+    color: white;
+  }
+  .social-media {
+    .sm-link {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  }
 }
