@@ -1,9 +1,12 @@
 .App {
-  height: 100vh;
   background: antiquewhite;
 }
 
-.App .component {
-  margin-top: 6vh;
+.App .content {
+  min-height: 94vh;
+}
+
+.App .content .component {
+  padding-top: 10vh;
 }
 /*# sourceMappingURL=App.css.map */

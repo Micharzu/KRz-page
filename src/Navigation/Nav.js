@@ -1,53 +1,47 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./nav-styles/Nav.css";
 
 import { Link } from "react-router-dom";
 
 function Nav() {
-  const navTo = (section) => {
-    console.log(section);
-  };
+  const navbarRef = useRef();
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      navbarRef.current.classList.toggle("scrolled", window.scrollY > 0);
+    });
+  });
   return (
-    <div className="navbar">
-      <ul className="nav-links">
-        <Link to="/" className="nav-link" onClick={() => navTo("home")}>
-          <li>Główna</li>
+    <div className="navbar" ref={navbarRef}>
+      <div className="nav-items">
+        <Link to="/" className="logo">
+          <div className="logo-text">
+            <h3>Rodzinne Studio Żak</h3>
+          </div>
         </Link>
-        <Link
-          to="/aktualnosci"
-          className="nav-link"
-          onClick={() => navTo("news")}
-        >
-          <li>Aktualności</li>
-        </Link>
-        <Link to="/zespol" className="nav-link" onClick={() => navTo("band")}>
-          <li>Zespół</li>
-        </Link>
-        <Link
-          to="/galeria"
-          className="nav-link"
-          onClick={() => navTo("gallery")}
-        >
-          <li>Galeria</li>
-        </Link>
-        <Link
-          to="/multimedia"
-          className="nav-link"
-          onClick={() => navTo("multimedia")}
-        >
-          <li>Multimedia</li>
-        </Link>
-        <Link to="/nuty" className="nav-link" onClick={() => navTo("sheets")}>
-          <li>Nuty</li>
-        </Link>
-        <Link
-          to="/kontakt"
-          className="nav-link"
-          onClick={() => navTo("contact")}
-        >
-          <li>Kontakt</li>
-        </Link>
-      </ul>
+        <ul className="nav-links">
+          <Link to="/" className="nav-link">
+            <li>Główna</li>
+          </Link>
+          <Link to="/aktualnosci" className="nav-link">
+            <li>Aktualności</li>
+          </Link>
+          <Link to="/zespol" className="nav-link">
+            <li>Zespół</li>
+          </Link>
+          <Link to="/galeria" className="nav-link">
+            <li>Galeria</li>
+          </Link>
+          <Link to="/multimedia" className="nav-link">
+            <li>Multimedia</li>
+          </Link>
+          <Link to="/nuty" className="nav-link">
+            <li>Nuty</li>
+          </Link>
+          <Link to="/kontakt" className="nav-link">
+            <li>Kontakt</li>
+          </Link>
+        </ul>
+      </div>
     </div>
   );
 }

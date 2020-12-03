@@ -1,8 +1,10 @@
 .App {
-  height: 100vh;
   background: antiquewhite;
 
-  .component {
-    margin-top: 6vh;
+  .content {
+    min-height: 94vh;
+    .component {
+      padding-top: 10vh;
+    }
   }
 }

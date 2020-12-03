@@ -1,3 +1,4 @@
+import React from "react";
 import "./app-styles/App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -9,23 +10,27 @@ import Gallery from "./components/Gallery/Gallery";
 import Multimedia from "./components/Multimedia/Multimedia";
 import Sheets from "./components/Sheets/Sheets";
 import Contact from "./components/Contact/Contact";
+import Footer from "./Footer/Footer";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Nav />
-        <div className="component">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/aktualnosci" component={News} />
-            <Route path="/zespol" component={Band} />
-            <Route path="/galeria" component={Gallery} />
-            <Route path="/multimedia" component={Multimedia} />
-            <Route path="/nuty" component={Sheets} />
-            <Route path="/kontakt" component={Contact} />
-          </Switch>
+        <div className="content">
+          <div className="component">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/aktualnosci" component={News} />
+              <Route path="/zespol" component={Band} />
+              <Route path="/galeria" component={Gallery} />
+              <Route path="/multimedia" component={Multimedia} />
+              <Route path="/nuty" component={Sheets} />
+              <Route path="/kontakt" component={Contact} />
+            </Switch>
+          </div>
         </div>
+        <Footer />
       </Router>
     </div>
   );

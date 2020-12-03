@@ -1,36 +1,52 @@
 .navbar {
-  background: white;
+  background: rgba(0, 0, 0, 0.2);
   width: 100%;
-  height: 6vh;
+  height: 10vh;
   position: fixed;
   top: 0;
 
   display: flex;
-  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
 
-  .nav-links {
-    margin: auto;
-
-    width: 85%;
-
+  .nav-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    list-style: none;
-    .nav-link {
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+
+    .logo {
+      color: rgb(85, 85, 85);
       text-decoration: none;
-      li {
-        color: rgb(85, 85, 85);
-        font-weight: 600;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: 0.3s;
-        &:hover {
-          color: rgb(214, 85, 85);
-        }
-        a {
+    }
+
+    .nav-links {
+      width: 70%;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      list-style: none;
+      .nav-link {
+        text-decoration: none;
+        li {
+          color: rgb(85, 85, 85);
+          font-weight: 600;
+          font-size: 1.2rem;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            color: rgb(214, 85, 85);
+          }
         }
       }
     }
   }
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
+  height: 6vh;
 }
