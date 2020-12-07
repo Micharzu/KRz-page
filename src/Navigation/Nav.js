@@ -3,8 +3,6 @@ import "./nav-styles/Nav.css";
 
 import { Link } from "react-router-dom";
 
-import Logo from "../assets/icons/rsz-icon.png";
-
 function Nav() {
   const navbarRef = useRef();
   useEffect(() => {
@@ -22,8 +20,8 @@ function Nav() {
           <Link to="/aktualnosci" className="nav-link">
             <li>Aktualności</li>
           </Link>
-          <Link to="/zespol" className="nav-link">
-            <li>Zespół</li>
+          <Link to="/zespol-zak" className="nav-link">
+            <li>Zespół Żak</li>
           </Link>
           <Link to="/galeria" className="nav-link">
             <li>Galeria</li>
@@ -33,6 +31,9 @@ function Nav() {
           </Link>
           <Link to="/nuty" className="nav-link">
             <li>Nuty</li>
+          </Link>
+          <Link to="/rodzinne-studio-zak" className="nav-link">
+            <li>RSŻ</li>
           </Link>
           <Link to="/kontakt" className="nav-link">
             <li>Kontakt</li>
