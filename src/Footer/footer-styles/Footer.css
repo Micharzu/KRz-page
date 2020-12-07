@@ -19,10 +19,25 @@
 
 .footer .copyrights {
   color: white;
+  cursor: default;
+}
+
+.footer .social-media {
+  display: inherit;
 }
 
 .footer .social-media .sm-link {
   margin: 0 10px;
   cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer .social-media .sm-link.fb:hover {
+  fill: #0099ff;
+}
+
+.footer .social-media .sm-link.yt:hover {
+  fill: red;
 }
 /*# sourceMappingURL=Footer.css.map */

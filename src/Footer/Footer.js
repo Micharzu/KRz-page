@@ -11,12 +11,12 @@ function Footer() {
   return (
     <div className="footer">
       <div className="copyrights">
-        <p>COPYRIGHT © 2020 – RODZINNE STUDIO ŻAK</p>
+        <p>COPYRIGHT © 2020 – KRYSTYNA RZUCIDŁO</p>
       </div>
       <IconContext.Provider value={{ size: "2em", color: "white" }}>
         <div className="social-media">
           <FaFacebook
-            className="sm-link"
+            className="sm-link fb"
             onClick={() => {
               openLink(
                 "https://www.facebook.com/Rodzinne-Studio-%C5%BBak-107425844539585"
@@ -24,7 +24,7 @@ function Footer() {
             }}
           />
           <FaYoutube
-            className="sm-link"
+            className="sm-link yt"
             onClick={() => {
               openLink(
                 "https://www.youtube.com/channel/UCV00p0kcO73K3IGoh1N6huA"

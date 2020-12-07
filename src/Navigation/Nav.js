@@ -3,6 +3,8 @@ import "./nav-styles/Nav.css";
 
 import { Link } from "react-router-dom";
 
+import Logo from "../assets/icons/rsz-icon.png";
+
 function Nav() {
   const navbarRef = useRef();
   useEffect(() => {
@@ -13,11 +15,6 @@ function Nav() {
   return (
     <div className="navbar" ref={navbarRef}>
       <div className="nav-items">
-        <Link to="/" className="logo">
-          <div className="logo-text">
-            <h3>Rodzinne Studio Żak</h3>
-          </div>
-        </Link>
         <ul className="nav-links">
           <Link to="/" className="nav-link">
             <li>Główna</li>

@@ -13,24 +13,17 @@
   .nav-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     width: 95%;
 
-    .logo {
-      color: rgb(85, 85, 85);
-      text-decoration: none;
-    }
-
     .nav-links {
-      width: 70%;
-
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
       list-style: none;
       .nav-link {
         text-decoration: none;
+        padding: 5px 10px;
         li {
           color: rgb(85, 85, 85);
           font-weight: 600;
@@ -49,5 +42,5 @@
 .navbar.scrolled {
   background-color: white;
   box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
-  height: 6vh;
+  height: 7vh;
 }
