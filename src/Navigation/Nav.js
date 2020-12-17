@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./nav-styles/Nav.css";
 
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
   const navbarRef = useRef();
@@ -14,30 +14,59 @@ function Nav() {
     <div className="navbar" ref={navbarRef}>
       <div className="nav-items">
         <ul className="nav-links">
-          <Link to="/" className="nav-link">
+          <NavLink
+            to="/"
+            exact
+            className="nav-link"
+            activeClassName="is-active"
+          >
             <li>Główna</li>
-          </Link>
-          <Link to="/aktualnosci" className="nav-link">
+          </NavLink>
+          <NavLink
+            to="/aktualnosci"
+            className="nav-link"
+            activeClassName="is-active"
+          >
             <li>Aktualności</li>
-          </Link>
-          <Link to="/zespol-zak" className="nav-link">
+          </NavLink>
+          <NavLink
+            to="/zespol-zak"
+            className="nav-link"
+            activeClassName="is-active"
+          >
             <li>Zespół Żak</li>
-          </Link>
-          <Link to="/galeria" className="nav-link">
+          </NavLink>
+          <NavLink
+            to="/galeria"
+            className="nav-link"
+            activeClassName="is-active"
+          >
             <li>Galeria</li>
-          </Link>
-          <Link to="/multimedia" className="nav-link">
+          </NavLink>
+          <NavLink
+            to="/multimedia"
+            className="nav-link"
+            activeClassName="is-active"
+          >
             <li>Multimedia</li>
-          </Link>
-          <Link to="/nuty" className="nav-link">
+          </NavLink>
+          <NavLink to="/nuty" className="nav-link" activeClassName="is-active">
             <li>Nuty</li>
-          </Link>
-          <Link to="/rodzinne-studio-zak" className="nav-link">
+          </NavLink>
+          <NavLink
+            to="/rodzinne-studio-zak"
+            className="nav-link"
+            activeClassName="is-active"
+          >
             <li>RSŻ</li>
-          </Link>
-          <Link to="/kontakt" className="nav-link">
+          </NavLink>
+          <NavLink
+            to="/kontakt"
+            className="nav-link"
+            activeClassName="is-active"
+          >
             <li>Kontakt</li>
-          </Link>
+          </NavLink>
         </ul>
       </div>
     </div>

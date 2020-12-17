@@ -1,5 +1,4 @@
 .navbar {
-  background: rgba(0, 0, 0, 0.05);
   width: 100%;
   height: 10vh;
   min-height: 40px;
@@ -13,6 +12,7 @@
           justify-content: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  z-index: 10;
 }
 
 .navbar .nav-items {
@@ -49,7 +49,7 @@
 }
 
 .navbar .nav-items .nav-links .nav-link li {
-  color: #555555;
+  color: #2e2e2e;
   font-weight: 600;
   font-size: 1.2rem;
   cursor: pointer;
@@ -58,13 +58,29 @@
 }
 
 .navbar .nav-items .nav-links .nav-link li:hover {
-  color: #d65555;
+  color: #3b78fd;
+}
+
+.navbar .nav-items .nav-links .nav-link.is-active li {
+  color: #3b78fd;
 }
 
 .navbar.scrolled {
-  background-color: white;
+  background-color: black;
   -webkit-box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
   height: 7vh;
+}
+
+.navbar.scrolled .nav-items .nav-links .nav-link li {
+  color: white;
+}
+
+.navbar.scrolled .nav-items .nav-links .nav-link li:hover {
+  color: #89aeff;
+}
+
+.navbar.scrolled .nav-items .nav-links .nav-link.is-active li {
+  color: #89aeff;
 }
 /*# sourceMappingURL=Nav.css.map */
