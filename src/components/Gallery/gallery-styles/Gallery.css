@@ -1,0 +1,44 @@
+.gallery .gallery-header {
+  width: 100%;
+  text-align: center;
+}
+
+.gallery .gallery-header h1 {
+  font-family: "Pacifico";
+  font-size: xxx-large;
+  color: #3b78fd;
+}
+
+.gallery .gallery-content {
+  padding: 20px 0;
+  width: 80%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.gallery .gallery-content .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.gallery .gallery-content .img-container img {
+  width: 100%;
+  -webkit-filter: grayscale(0.8);
+          filter: grayscale(0.8);
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.gallery .gallery-content .img-container img:hover {
+  -webkit-filter: none;
+          filter: none;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=Gallery.css.map */

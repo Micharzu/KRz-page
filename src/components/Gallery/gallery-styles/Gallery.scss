@@ -1,0 +1,32 @@
+.gallery {
+  .gallery-header {
+    width: 100%;
+    text-align: center;
+    h1 {
+      font-family: "Pacifico";
+      font-size: xxx-large;
+      color: rgb(59, 120, 253);
+    }
+  }
+  .gallery-content {
+    padding: 20px 0;
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .img-container {
+      display: flex;
+      overflow: hidden;
+      img {
+        width: 100%;
+        filter: grayscale(0.8);
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          filter: none;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
