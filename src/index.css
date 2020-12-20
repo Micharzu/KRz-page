@@ -10,6 +10,12 @@
   font-synthesis: normal;
 }
 
+@font-face {
+  font-family: "Merienda";
+  src: url(assets/fonts/Merienda-Regular.ttf);
+  font-synthesis: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
