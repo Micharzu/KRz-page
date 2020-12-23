@@ -1,3 +1,6 @@
+$active-text-color: rgb(137, 174, 255);
+$scrolled-active-text-color: rgb(59, 120, 253);
+
 .navbar {
   width: 100%;
   height: 10vh;
@@ -7,7 +10,7 @@
 
   display: flex;
   justify-content: center;
-  transition: 0.5s;
+  transition: $scolled-navbar-transition;
   z-index: 10;
 
   .nav-items {
@@ -21,24 +24,51 @@
       display: flex;
       flex-direction: row;
       list-style: none;
+      transition: 0.5s ease-in;
       .nav-link {
         text-decoration: none;
         padding: 5px 15px;
+        color: rgb(46, 46, 46);
         li {
-          color: rgb(46, 46, 46);
+          white-space: nowrap;
+
           font-weight: 600;
           font-size: 1.2rem;
-          font-family: "Merienda";
+          font-family: "CinzelDecorative-Bold";
           cursor: pointer;
-          transition: 0.3s;
+          transition: 0.2s;
           &:hover {
-            color: rgb(59, 120, 253);
+            color: $scrolled-active-text-color !important;
           }
         }
         &.is-active {
           li {
-            color: rgb(59, 120, 253);
+            color: $scrolled-active-text-color !important;
           }
+        }
+      }
+    }
+
+    .nav-burger {
+      display: none;
+      width: 100%;
+      transition: 0.2s;
+      .burger {
+        transition: 0.8s;
+        clip-path: polygon(0 100%, 0% 0, 100% 0, 100% 100%);
+        cursor: pointer;
+        .line {
+          background: rgb(46, 46, 46);
+          height: 5px;
+          width: 2.5rem;
+          margin: 6px 0;
+          transition: 0.2s;
+        }
+        .line-1 {
+          margin-top: 0;
+        }
+        .line-3 {
+          margin-bottom: 0;
         }
       }
     }
@@ -46,21 +76,123 @@
 }
 
 .navbar.scrolled {
-  // background-color: white;
   background-color: black;
   box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.2);
   height: 7vh;
   .nav-items .nav-links .nav-link {
+    color: white;
     li {
-      color: white;
       &:hover {
-        color: rgb(137, 174, 255);
+        color: $active-text-color;
       }
     }
     &.is-active {
       li {
-        color: rgb(137, 174, 255);
+        color: $active-text-color;
       }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .navbar .nav-items .nav-links .nav-link li {
+    font-size: medium;
+  }
+}
+
+@media (max-width: 950px) {
+  .navbar {
+    align-items: flex-end;
+    .nav-items {
+      flex-direction: column;
+      justify-content: center;
+      .nav-links {
+        position: absolute;
+        flex-direction: column;
+        top: -90vh;
+        padding: 0;
+        height: 90vh;
+        justify-content: space-evenly;
+        opacity: 0;
+
+        .nav-link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          li {
+            font-size: xx-large;
+          }
+        }
+      }
+      .nav-burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        .burger:hover .line {
+          width: 3.5rem;
+          background: $scrolled-active-text-color !important;
+        }
+      }
+    }
+    &.scrolled {
+      .nav-items {
+        .nav-links .nav-link {
+          color: rgb(46, 46, 46);
+        }
+        .nav-burger {
+          height: 7vh;
+          .line {
+            background: rgb(241, 241, 241);
+          }
+        }
+      }
+    }
+  }
+  .navbar.scrolled.burger-opened,
+  .navbar.burger-opened {
+    background-color: black;
+    height: 100vh;
+    transition: 0.5s ease-in;
+    .nav-items {
+      .nav-links {
+        opacity: 1;
+        top: 0;
+        .nav-link {
+          animation: lightenUp 0.5s 0.5s forwards;
+        }
+      }
+      .nav-burger {
+        height: 10vh;
+        .burger {
+          clip-path: polygon(0 100%, 49% 0, 51% 0, 100% 100%);
+          .line {
+            background: rgb(46, 46, 46);
+            animation: lightenUpBg 0.5s 0.58s forwards;
+          }
+        }
+      }
+    }
+  }
+  .navbar.closing-burger,
+  .navbar.scrolled.closing-burger {
+    transition: 0.5s ease-in;
+  }
+
+  @keyframes lightenUp {
+    85% {
+      color: white;
+    }
+    100% {
+      color: rgb(185, 185, 185);
+    }
+  }
+  @keyframes lightenUpBg {
+    85% {
+      background: white;
+    }
+    100% {
+      background: rgb(185, 185, 185);
     }
   }
 }

@@ -1,15 +1,27 @@
 import React, { useEffect, useRef } from "react";
 import "./nav-styles/Nav.css";
 
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   const navbarRef = useRef();
+  const burgerRef = useRef();
   useEffect(() => {
     window.addEventListener("scroll", () => {
       navbarRef.current.classList.toggle("scrolled", window.scrollY > 0);
     });
   });
+  const toggleBurger = () => {
+    navbarRef.current.classList.toggle("burger-opened");
+    burgerRef.current.classList.toggle("opened");
+
+    if (!navbarRef.current.classList.contains("burger-opened")) {
+      navbarRef.current.classList.add("closing-burger");
+      setTimeout(() => {
+        navbarRef.current.classList.remove("closing-burger");
+      }, 700);
+    }
+  };
   return (
     <div className="navbar" ref={navbarRef}>
       <div className="nav-items">
@@ -19,6 +31,7 @@ function Nav() {
             exact
             className="nav-link"
             activeClassName="is-active"
+            onClick={toggleBurger}
           >
             <li>Główna</li>
           </NavLink>
@@ -26,6 +39,7 @@ function Nav() {
             to="/aktualnosci"
             className="nav-link"
             activeClassName="is-active"
+            onClick={toggleBurger}
           >
             <li>Aktualności</li>
           </NavLink>
@@ -33,6 +47,7 @@ function Nav() {
             to="/zespol-zak"
             className="nav-link"
             activeClassName="is-active"
+            onClick={toggleBurger}
           >
             <li>Zespół Żak</li>
           </NavLink>
@@ -40,6 +55,7 @@ function Nav() {
             to="/galeria"
             className="nav-link"
             activeClassName="is-active"
+            onClick={toggleBurger}
           >
             <li>Galeria</li>
           </NavLink>
@@ -47,16 +63,23 @@ function Nav() {
             to="/multimedia"
             className="nav-link"
             activeClassName="is-active"
+            onClick={toggleBurger}
           >
             <li>Multimedia</li>
           </NavLink>
-          <NavLink to="/nuty" className="nav-link" activeClassName="is-active">
+          <NavLink
+            to="/nuty"
+            className="nav-link"
+            activeClassName="is-active"
+            onClick={toggleBurger}
+          >
             <li>Nuty</li>
           </NavLink>
           <NavLink
             to="/rodzinne-studio-zak"
             className="nav-link"
             activeClassName="is-active"
+            onClick={toggleBurger}
           >
             <li>RSŻ</li>
           </NavLink>
@@ -64,10 +87,18 @@ function Nav() {
             to="/kontakt"
             className="nav-link"
             activeClassName="is-active"
+            onClick={toggleBurger}
           >
             <li>Kontakt</li>
           </NavLink>
         </ul>
+        <div className="nav-burger">
+          <div className="burger" ref={burgerRef} onClick={toggleBurger}>
+            <div className="line line-1" />
+            <div className="line line-2" />
+            <div className="line line-3" />
+          </div>
+        </div>
       </div>
     </div>
   );
