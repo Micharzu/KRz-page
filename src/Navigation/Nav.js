@@ -35,14 +35,14 @@ function Nav() {
           >
             <li>Główna</li>
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/aktualnosci"
             className="nav-link"
             activeClassName="is-active"
             onClick={toggleBurger}
           >
             <li>Aktualności</li>
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/zespol-zak"
             className="nav-link"
@@ -83,14 +83,14 @@ function Nav() {
           >
             <li>RSŻ</li>
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/kontakt"
             className="nav-link"
             activeClassName="is-active"
             onClick={toggleBurger}
           >
             <li>Kontakt</li>
-          </NavLink>
+          </NavLink> */}
         </ul>
         <div className="nav-burger">
           <div className="burger" ref={burgerRef} onClick={toggleBurger}>

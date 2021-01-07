@@ -7,6 +7,7 @@
   font-family: "Pacifico";
   font-size: xxx-large;
   color: #3b78fd;
+  cursor: default;
 }
 
 .gallery .gallery-content {
@@ -28,6 +29,8 @@
 
 .gallery .gallery-content .img-container img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-filter: grayscale(0.8);
           filter: grayscale(0.8);
   cursor: pointer;

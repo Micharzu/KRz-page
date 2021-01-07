@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Langar";
   src: url(assets/fonts/Langar-Regular.ttf);
   font-synthesis: normal;
@@ -21,6 +21,7 @@
   src: url(assets/fonts/CinzelDecorative-Regular.ttf);
   font-synthesis: normal;
 }
+*/
 
 @font-face {
   font-family: "CinzelDecorative-Bold";

@@ -15,11 +15,64 @@
   width: 100%;
   height: 8vh;
   min-height: 40px;
+  color: white;
 }
 
 .footer .copyrights {
-  color: white;
   cursor: default;
+}
+
+.footer .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.footer .contact .mail {
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.footer .contact .mail-icon {
+  margin: 0 5px;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.footer .contact:hover .mail {
+  color: #3b78fd;
+}
+
+.footer .contact:hover .mail-icon {
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+  fill: #3b78fd;
+}
+
+.footer .contact .tooltip {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  background: #3b78fd;
+  border-radius: 15px;
+  padding: 6px 14px;
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.footer .contact .tooltip.opened {
+  visibility: visible;
+  opacity: 1;
 }
 
 .footer .social-media {
@@ -31,10 +84,6 @@
   cursor: pointer;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
-}
-
-.footer .social-media .sm-link.fb:hover {
-  fill: #0099ff;
 }
 
 .footer .social-media .sm-link.yt:hover {

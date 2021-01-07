@@ -22,13 +22,13 @@ function App() {
           <div className="component">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/aktualnosci" component={News} />
+              {/* <Route path="/aktualnosci" component={News} /> */}
               <Route path="/zespol-zak" component={Band} />
               <Route path="/galeria" component={Gallery} />
               <Route path="/multimedia" component={Multimedia} />
               <Route path="/nuty" component={Sheets} />
               <Route path="/rodzinne-studio-zak" component={RSZ} />
-              <Route path="/kontakt" component={Contact} />
+              {/* <Route path="/kontakt" component={Contact} /> */}
             </Switch>
           </div>
         </div>

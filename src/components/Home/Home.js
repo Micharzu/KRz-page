@@ -19,14 +19,14 @@ function Home() {
         height: "100%",
       })
       .to(gapRef.current, { duration: 1.6, width: "0" }, "<")
-      .to(imgContainerRef.current, { duration: 0.6, width: "100vw" })
+      .to(imgContainerRef.current, { duration: 0.4, width: "100vw" })
       .to(
         headlineRef.current,
-        { duration: 0.6, filter: "blur(0px)", fontSize: "1.6rem" },
+        { duration: 0.4, filter: "blur(0px)", scale: "1.05" },
         "<"
       );
     gsap.to(imgRef.current, {
-      yPercent: 20,
+      yPercent: 10,
       ease: "none",
       scrollTrigger: {
         trigger: imgContainerRef.current,

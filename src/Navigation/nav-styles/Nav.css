@@ -208,8 +208,8 @@
   }
   .navbar.scrolled.burger-opened .nav-items .nav-links .nav-link,
   .navbar.burger-opened .nav-items .nav-links .nav-link {
-    -webkit-animation: lightenUp 0.7s 0.9s forwards;
-            animation: lightenUp 0.7s 0.9s forwards;
+    -webkit-animation: lightenUp 0.5s 0.5s forwards;
+            animation: lightenUp 0.5s 0.5s forwards;
   }
   .navbar.scrolled.burger-opened .nav-items .nav-burger,
   .navbar.burger-opened .nav-items .nav-burger {
@@ -223,8 +223,8 @@
   .navbar.scrolled.burger-opened .nav-items .nav-burger .burger .line,
   .navbar.burger-opened .nav-items .nav-burger .burger .line {
     background: #2e2e2e;
-    -webkit-animation: lightenUpBg 0.7s 0.98s forwards;
-            animation: lightenUpBg 0.7s 0.98s forwards;
+    -webkit-animation: lightenUpBg 0.5s 0.58s forwards;
+            animation: lightenUpBg 0.5s 0.58s forwards;
   }
   .navbar.closing-burger,
   .navbar.scrolled.closing-burger {

@@ -1,5 +1,6 @@
 $active-text-color: rgb(137, 174, 255);
 $scrolled-active-text-color: rgb(59, 120, 253);
+$scrolled-navbar-transition: 0.3s;
 
 .navbar {
   width: 100%;
@@ -10,7 +11,7 @@ $scrolled-active-text-color: rgb(59, 120, 253);
 
   display: flex;
   justify-content: center;
-  transition: $scolled-navbar-transition;
+  transition: $scrolled-navbar-transition;
   z-index: 10;
 
   .nav-items {
@@ -25,18 +26,20 @@ $scrolled-active-text-color: rgb(59, 120, 253);
       flex-direction: row;
       list-style: none;
       transition: 0.5s ease-in;
+
       .nav-link {
         text-decoration: none;
         padding: 5px 15px;
         color: rgb(46, 46, 46);
+
         li {
           white-space: nowrap;
-
           font-weight: 600;
           font-size: 1.2rem;
           font-family: "CinzelDecorative-Bold";
           cursor: pointer;
           transition: 0.2s;
+
           &:hover {
             color: $scrolled-active-text-color !important;
           }
