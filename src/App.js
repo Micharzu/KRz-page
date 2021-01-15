@@ -4,14 +4,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Nav from "./Navigation/Nav";
 import Home from "./components/Home/Home";
-import News from "./components/News/News";
+
 import Band from "./components/Band/Band";
 import Gallery from "./components/Gallery/Gallery";
 import Multimedia from "./components/Multimedia/Multimedia";
 import Sheets from "./components/Sheets/Sheets";
 import RSZ from "./components/RSZ/RSZ";
-import Contact from "./components/Contact/Contact";
 import Footer from "./Footer/Footer";
+
+// import News from "./components/News/News";
+// import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
