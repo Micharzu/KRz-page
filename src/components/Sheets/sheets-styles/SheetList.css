@@ -1,0 +1,31 @@
+.sheets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.sheets .song-list .song-list-item {
+  padding: 15px;
+  margin: 5px 0;
+  background: #89aeff;
+  border: 3px white solid;
+  border-radius: 10px;
+  font-weight: 600;
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+  -webkit-box-shadow: 0 0 5px 1px #cccccc;
+          box-shadow: 0 0 5px 1px #cccccc;
+  cursor: pointer;
+  text-align: center;
+}
+
+.sheets .song-list .song-list-item:hover {
+  background: #3b78fd;
+}
+/*# sourceMappingURL=SheetList.css.map */

@@ -1,0 +1,25 @@
+$blue-light: rgb(137, 174, 255);
+$blue-dark: rgb(59, 120, 253);
+
+.sheets {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .song-list {
+    .song-list-item {
+      padding: 15px;
+      margin: 5px 0;
+      background: $blue-light;
+      border: 3px white solid;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: 0.15s;
+      box-shadow: 0 0 5px 1px #cccccc;
+      cursor: pointer;
+      text-align: center;
+      &:hover {
+        background: $blue-dark;
+      }
+    }
+  }
+}
