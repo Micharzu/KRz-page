@@ -6,22 +6,34 @@ import { NavLink } from "react-router-dom";
 function Nav() {
   const navbarRef = useRef();
   const burgerRef = useRef();
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       navbarRef.current.classList.toggle("scrolled", window.scrollY > 0);
     });
   });
-  const toggleBurger = () => {
-    navbarRef.current.classList.toggle("burger-opened");
-    burgerRef.current.classList.toggle("opened");
 
+  const toggleBurger = () => {
+    //open
     if (!navbarRef.current.classList.contains("burger-opened")) {
-      navbarRef.current.classList.add("closing-burger");
-      setTimeout(() => {
-        navbarRef.current.classList.remove("closing-burger");
-      }, 700);
+      burgerRef.current.classList.add("opened");
+      navbarRef.current.classList.add("burger-opened");
+    }
+    //close
+    else {
+      closeBurger();
     }
   };
+
+  const closeBurger = () => {
+    burgerRef.current.classList.remove("opened");
+    navbarRef.current.classList.remove("burger-opened");
+    navbarRef.current.classList.add("closing-burger");
+    setTimeout(() => {
+      navbarRef.current.classList.remove("closing-burger");
+    }, 700);
+  };
+
   return (
     <div className="navbar" ref={navbarRef}>
       <div className="nav-items">
@@ -31,7 +43,7 @@ function Nav() {
             exact
             className="nav-link"
             activeClassName="is-active"
-            onClick={toggleBurger}
+            onClick={closeBurger}
           >
             <li>Główna</li>
           </NavLink>
@@ -39,7 +51,7 @@ function Nav() {
             to="/aktualnosci"
             className="nav-link"
             activeClassName="is-active"
-            onClick={toggleBurger}
+            onClick={closeBurger}
           >
             <li>Aktualności</li>
           </NavLink> */}
@@ -47,7 +59,7 @@ function Nav() {
             to="/zespol-zak"
             className="nav-link"
             activeClassName="is-active"
-            onClick={toggleBurger}
+            onClick={closeBurger}
           >
             <li>Zespół Żak</li>
           </NavLink>
@@ -55,7 +67,7 @@ function Nav() {
             to="/galeria"
             className="nav-link"
             activeClassName="is-active"
-            onClick={toggleBurger}
+            onClick={closeBurger}
           >
             <li>Galeria</li>
           </NavLink>
@@ -63,7 +75,7 @@ function Nav() {
             to="/multimedia"
             className="nav-link"
             activeClassName="is-active"
-            onClick={toggleBurger}
+            onClick={closeBurger}
           >
             <li>Multimedia</li>
           </NavLink>
@@ -71,7 +83,7 @@ function Nav() {
             to="/nuty"
             className="nav-link"
             activeClassName="is-active"
-            onClick={toggleBurger}
+            onClick={closeBurger}
           >
             <li>Nuty</li>
           </NavLink>
@@ -79,7 +91,7 @@ function Nav() {
             to="/rodzinne-studio-zak"
             className="nav-link"
             activeClassName="is-active"
-            onClick={toggleBurger}
+            onClick={closeBurger}
           >
             <li>RSŻ</li>
           </NavLink>
@@ -87,7 +99,7 @@ function Nav() {
             to="/kontakt"
             className="nav-link"
             activeClassName="is-active"
-            onClick={toggleBurger}
+            onClick={closeBurger}
           >
             <li>Kontakt</li>
           </NavLink> */}
