@@ -1,4 +1,4 @@
-.sheets {
+.sheet-list .sheets {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,7 +10,7 @@
       justify-content: space-around;
 }
 
-.sheets .song-list .song-list-item {
+.sheet-list .sheets .song-list .song-list-item {
   padding: 15px;
   margin: 5px 0;
   background: #89aeff;
@@ -25,7 +25,97 @@
   text-align: center;
 }
 
-.sheets .song-list .song-list-item:hover {
+.sheet-list .sheets .song-list .song-list-item:hover {
+  background: #3b78fd;
+}
+
+.sheet-list .song-list-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 950px) {
+  .sheet-list .song-list-menu {
+    display: block;
+    position: absolute;
+    top: 10.3%;
+    left: 0;
+    height: 89.7%;
+    cursor: pointer;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+  }
+  .sheet-list .song-list-menu.opened {
+    left: 40%;
+  }
+  .sheet-list .song-list-menu.opened .song-list-icon {
+    padding: 10px 10px 10px 20px;
+    color: #dce7ff !important;
+  }
+  .sheet-list .song-list-menu .song-list-icon {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 7vh;
+    padding: 10px;
+    background: #89aeff;
+    -webkit-box-shadow: 0 0 3px 1px #5289ff;
+            box-shadow: 0 0 3px 1px #5289ff;
+    -webkit-transition: padding 0.6s, background 0.15s;
+    transition: padding 0.6s, background 0.15s;
+  }
+  .sheet-list .song-list-menu .song-list-icon:hover {
+    color: white !important;
+    background: #3b78fd;
+  }
+  .sheet-list .sheets .song-list {
+    position: absolute;
+    left: 0;
+    -webkit-transform: translateX(-101%);
+            transform: translateX(-101%);
+    width: 40vw;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-box-shadow: 0 0 3px 1px #5289ff;
+            box-shadow: 0 0 3px 1px #5289ff;
+    max-height: 80%;
+    overflow-y: scroll;
+  }
+  .sheet-list .sheets .song-list.opened {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .sheet-list .sheets .song-list .song-list-item {
+    border: none;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
+    border-radius: 0;
+    color: #dce7ff;
+  }
+  .sheet-list .sheets .song-list .song-list-item:hover {
+    color: white;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: lavender;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #89aeff;
+  -webkit-box-shadow: inset 0 0 2px #3b78fd;
+          box-shadow: inset 0 0 2px #3b78fd;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
   background: #3b78fd;
 }
 /*# sourceMappingURL=SheetList.css.map */
