@@ -7,6 +7,12 @@ $very-light-blue: rgb(220, 231, 255);
     flex-direction: row;
     justify-content: space-around;
     .song-list {
+      &.small-screen {
+        display: none;
+      }
+      &.big-screen {
+        display: block;
+      }
       .song-list-item {
         padding: 15px;
         margin: 5px 0;
@@ -62,6 +68,12 @@ $very-light-blue: rgb(220, 231, 255);
     }
 
     .sheets .song-list {
+      &.big-screen {
+        display: none;
+      }
+      &.small-screen {
+        display: block;
+      }
       position: absolute;
       left: 0;
       transform: translateX(-101%);

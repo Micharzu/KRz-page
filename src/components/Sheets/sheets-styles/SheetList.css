@@ -10,6 +10,14 @@
       justify-content: space-around;
 }
 
+.sheet-list .sheets .song-list.small-screen {
+  display: none;
+}
+
+.sheet-list .sheets .song-list.big-screen {
+  display: block;
+}
+
 .sheet-list .sheets .song-list .song-list-item {
   padding: 15px;
   margin: 5px 0;
@@ -78,6 +86,12 @@
             box-shadow: 0 0 3px 1px #5289ff;
     max-height: 80%;
     overflow-y: scroll;
+  }
+  .sheet-list .sheets .song-list.big-screen {
+    display: none;
+  }
+  .sheet-list .sheets .song-list.small-screen {
+    display: block;
   }
   .sheet-list .sheets .song-list.opened {
     -webkit-transform: translateX(0);

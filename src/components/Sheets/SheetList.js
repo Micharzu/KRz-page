@@ -191,7 +191,19 @@ function SheetList() {
         </IconContext.Provider>
       </div>
       <div className="sheets">
-        <div className="song-list" ref={listRef}>
+        <div className="song-list big-screen" ref={listRef}>
+          {songList &&
+            songList.map((song) => (
+              <div
+                key={song.id}
+                className="song-list-item"
+                onClick={() => setActiveSong(song)}
+              >
+                {song.title}
+              </div>
+            ))}
+        </div>
+        <div className="song-list small-screen" ref={listRef}>
           {songList &&
             songList.map((song) => (
               <div
