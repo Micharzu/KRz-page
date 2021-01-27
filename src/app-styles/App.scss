@@ -16,11 +16,14 @@ body {
 /* width */
 ::-webkit-scrollbar {
   width: 16px;
+  background: $blue-light;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: lavender;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 /* Handle */
