@@ -82,11 +82,11 @@
 .footer .social-media .sm-link {
   margin: 0 10px;
   cursor: pointer;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: 0.15s ease-in;
+  transition: 0.15s ease-in;
 }
 
 .footer .social-media .sm-link.yt:hover {
-  fill: red;
+  fill: #3b78fd;
 }
 /*# sourceMappingURL=Footer.css.map */

@@ -54,9 +54,10 @@ $mark-up-color: rgb(59, 120, 253);
     .sm-link {
       margin: 0 10px;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: 0.15s ease-in;
       &.yt:hover {
-        fill: red;
+        // fill: rgb(255, 84, 84);
+        fill: $mark-up-color;
       }
     }
   }
