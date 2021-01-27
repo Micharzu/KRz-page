@@ -17,10 +17,12 @@
   min-height: 40px;
   color: white;
   font-family: "CinzelDecorative-Bold";
+  font-size: medium;
 }
 
 .footer .copyrights {
   cursor: default;
+  margin: 0 5px;
 }
 
 .footer .contact {
@@ -69,6 +71,7 @@
           transform: translateY(-35px);
   -webkit-transition: 1s;
   transition: 1s;
+  font-family: "Langar";
 }
 
 .footer .contact .tooltip.opened {
@@ -89,5 +92,17 @@
 
 .footer .social-media .sm-link.yt:hover {
   fill: #3b78fd;
+}
+
+@media only screen and (max-width: 950px) {
+  .footer {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    font-size: xx-small;
+  }
 }
 /*# sourceMappingURL=Footer.css.map */

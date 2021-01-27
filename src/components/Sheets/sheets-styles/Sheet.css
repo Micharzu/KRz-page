@@ -1,3 +1,16 @@
+.song {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .song .song-title {
   text-align: center;
   padding: 0.3em;
@@ -15,6 +28,44 @@
   text-align: center;
   margin: 10px;
   color: #323232;
+}
+
+.song .active-song-recording {
+  margin: 10px 0;
+  min-width: 250px;
+  width: 100%;
+}
+
+.song .active-song-recording audio {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.song .active-song-recording audio::-webkit-media-controls-panel {
+  background: #89aeff;
+  width: 100%;
+  min-width: 150px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.song .active-song-recording audio:focus {
+  border: none;
+  outline: none;
+}
+
+.song .active-song-recording audio:active::-webkit-media-controls-panel {
+  background: #3b78fd;
+}
+
+.song .active-song-recording audio:hover::-webkit-media-controls-panel {
+  background: #3b78fd;
+}
+
+.song .active-song-sheets {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 
 .song .active-song-sheets .navbar-wrapper {

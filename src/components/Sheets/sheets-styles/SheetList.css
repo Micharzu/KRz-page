@@ -10,6 +10,10 @@
       justify-content: space-around;
 }
 
+.sheet-list .sheets .song-list {
+  z-index: 1;
+}
+
 .sheet-list .sheets .song-list.small-screen {
   display: none;
 }
@@ -37,6 +41,10 @@
   background: #3b78fd;
 }
 
+.sheet-list .sheets .active-song {
+  max-width: 65%;
+}
+
 .sheet-list .song-list-menu {
   display: none;
 }
@@ -48,6 +56,7 @@
     top: 10.3%;
     left: 0;
     height: 89.7%;
+    z-index: 1;
     cursor: pointer;
     -webkit-transition: 0.6s;
     transition: 0.6s;
@@ -73,6 +82,9 @@
   .sheet-list .song-list-menu .song-list-icon:hover {
     color: white !important;
     background: #3b78fd;
+  }
+  .sheet-list .sheets .active-song {
+    max-width: 85%;
   }
   .sheet-list .sheets .song-list {
     position: absolute;

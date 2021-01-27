@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import SheetSample from "F:/react exc/rsz/rsz-strona/src/assets/sheets/test_pdf.pdf";
+import AudioSample from "../../assets/audio/test_mp3.mp3";
 import "./sheets-styles/SheetList.css";
 import Sheet from "./Sheet";
 import { BsMusicNoteList as SongListIcon } from "react-icons/bs";
@@ -14,12 +15,13 @@ function SheetList() {
   const songList = [
     {
       id: 0,
-      title: "qqqq",
-      desc: "Masterpiece",
+      title: "Masterpiece",
+      desc:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
       availableSheets: true,
-      availableRecording: false,
+      availableRecording: true,
       sheets: SheetSample,
-      recording: null,
+      recording: AudioSample,
     },
     {
       id: 1,
