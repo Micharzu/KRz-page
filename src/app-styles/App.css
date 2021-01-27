@@ -1,4 +1,4 @@
-.App {
+body {
   background: #f1f1f1;
 }
 
@@ -8,5 +8,29 @@
 
 .App .content .component {
   padding-top: 10vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: lavender;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #89aeff;
+  -webkit-box-shadow: inset 0 0 2px #3b78fd;
+          box-shadow: inset 0 0 2px #3b78fd;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3b78fd;
 }
 /*# sourceMappingURL=App.css.map */

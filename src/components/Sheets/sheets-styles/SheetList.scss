@@ -99,24 +99,3 @@ $very-light-blue: rgb(220, 231, 255);
     }
   }
 }
-
-/* width */
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: lavender;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: $blue-light;
-  box-shadow: inset 0 0 2px $blue-dark;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: $blue-dark;
-}

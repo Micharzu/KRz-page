@@ -135,8 +135,12 @@ function SheetList() {
   const [listIsOpened, setListIsOpened] = useState(false);
   const [baseContentHeight, setBaseContentHeight] = useState();
   const [newContent, setNewContent] = useState();
+  const [initialRender, setInitialRender] = useState(true);
   const listRef = useRef();
   const buttonRef = useRef();
+
+  const body = document.querySelector("body");
+  const nav = document.querySelector(".nav-items");
 
   useEffect(() => {
     setBaseContentHeight(document.querySelector(".content").offsetHeight);
@@ -144,27 +148,40 @@ function SheetList() {
   }, []);
 
   useEffect(() => {
-    let offset = Math.ceil((baseContentHeight * 3) / 100) - 0.5;
-    listRef.current.classList.toggle("opened");
-    buttonRef.current.classList.toggle("opened");
-
-    if (baseContentHeight && window.pageYOffset > offset) {
-      window.scrollTo({ top: offset, behavior: "smooth" });
-    }
-    if (listIsOpened) {
-      disableBodyScroll(listRef.current);
+    if (initialRender) {
+      setInitialRender(false);
     } else {
-      clearAllBodyScrollLocks();
+      let offset = Math.ceil((baseContentHeight * 3) / 100) - 0.5;
+
+      listRef.current.classList.toggle("opened");
+      buttonRef.current.classList.toggle("opened");
+
+      if (listIsOpened) {
+        if (baseContentHeight && window.pageYOffset > offset) {
+          window.scrollTo({ top: offset, behavior: "smooth" });
+        }
+        if (newContent && baseContentHeight) {
+          if (newContent.offsetHeight > baseContentHeight) {
+            body.style.paddingRight = "16px";
+            nav.classList.add("no-scrollbar");
+          }
+        }
+        disableBodyScroll(listRef.current);
+      } else {
+        if (newContent && baseContentHeight) {
+          body.style.paddingRight = "0";
+          nav.classList.remove("no-scrollbar");
+        }
+        clearAllBodyScrollLocks();
+      }
+      setListHeight();
     }
-    setListHeight();
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [listIsOpened]);
 
   useEffect(() => {
     setListHeight();
-    listRef.current.classList.remove("opened");
-    buttonRef.current.classList.remove("opened");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeSong]);
 
@@ -209,7 +226,10 @@ function SheetList() {
               <div
                 key={song.id}
                 className="song-list-item"
-                onClick={() => setActiveSong(song)}
+                onClick={() => {
+                  setActiveSong(song);
+                  setListIsOpened(false);
+                }}
               >
                 {song.title}
               </div>
