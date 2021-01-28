@@ -10,8 +10,11 @@ $mark-up-color: rgb(59, 120, 253);
   height: 8vh;
   min-height: 40px;
   color: white;
+  font-family: "CinzelDecorative-Bold";
+  font-size: medium;
   .copyrights {
     cursor: default;
+    margin: 0 5px;
   }
   .contact {
     display: flex;
@@ -43,6 +46,7 @@ $mark-up-color: rgb(59, 120, 253);
       padding: 6px 14px;
       transform: translateY(-35px);
       transition: 1s;
+      font-family: "Langar";
       &.opened {
         visibility: visible;
         opacity: 1;
@@ -54,10 +58,23 @@ $mark-up-color: rgb(59, 120, 253);
     .sm-link {
       margin: 0 10px;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: 0.15s ease-in;
       &.yt:hover {
-        fill: red;
+        // fill: rgb(255, 84, 84);
+        fill: $mark-up-color;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .footer {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    font-size: xx-small;
   }
 }

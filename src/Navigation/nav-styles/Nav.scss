@@ -3,23 +3,26 @@ $scrolled-active-text-color: rgb(59, 120, 253);
 $scrolled-navbar-transition: 0.3s;
 
 .navbar {
-  width: 100%;
+  width: 80%;
+  padding: 0 10%;
   height: 10vh;
   min-height: 40px;
   position: fixed;
   top: 0;
 
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   transition: $scrolled-navbar-transition;
   z-index: 10;
 
   .nav-items {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
-    width: 90%;
+
+    &.no-scrollbar {
+      padding-right: 15px;
+    }
 
     .nav-links {
       display: flex;
@@ -106,6 +109,7 @@ $scrolled-navbar-transition: 0.3s;
 @media (max-width: 950px) {
   .navbar {
     align-items: flex-end;
+    justify-content: center;
     .nav-items {
       flex-direction: column;
       justify-content: center;

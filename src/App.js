@@ -8,7 +8,7 @@ import Home from "./components/Home/Home";
 import Band from "./components/Band/Band";
 import Gallery from "./components/Gallery/Gallery";
 import Multimedia from "./components/Multimedia/Multimedia";
-import Sheets from "./components/Sheets/Sheets";
+import Sheets from "./components/Sheets/SheetList";
 import RSZ from "./components/RSZ/RSZ";
 import Footer from "./Footer/Footer";
 
