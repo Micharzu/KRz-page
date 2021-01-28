@@ -7,13 +7,13 @@ import Home from "./components/Home/Home";
 
 import Band from "./components/Band/Band";
 import Gallery from "./components/Gallery/Gallery";
-import Multimedia from "./components/Multimedia/Multimedia";
 import Sheets from "./components/Sheets/SheetList";
 import RSZ from "./components/RSZ/RSZ";
 import Footer from "./Footer/Footer";
 
 // import News from "./components/News/News";
 // import Contact from "./components/Contact/Contact";
+// import Multimedia from "./components/Multimedia/Multimedia";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
               {/* <Route path="/aktualnosci" component={News} /> */}
               <Route path="/zespol-zak" component={Band} />
               <Route path="/galeria" component={Gallery} />
-              <Route path="/multimedia" component={Multimedia} />
+              {/* <Route path="/multimedia" component={Multimedia} /> */}
               <Route path="/nuty" component={Sheets} />
               <Route path="/rodzinne-studio-zak" component={RSZ} />
               {/* <Route path="/kontakt" component={Contact} /> */}

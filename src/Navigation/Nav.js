@@ -71,14 +71,14 @@ function Nav() {
           >
             <li>Galeria</li>
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/multimedia"
             className="nav-link"
             activeClassName="is-active"
             onClick={closeBurger}
           >
             <li>Multimedia</li>
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/nuty"
             className="nav-link"
