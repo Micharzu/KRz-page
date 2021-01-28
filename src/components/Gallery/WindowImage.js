@@ -1,10 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./gallery-styles/WindowImage.css";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 function WindowImage({ activeImg, deselectPhoto }) {
   const imgContainerRef = useRef();
@@ -20,6 +16,7 @@ function WindowImage({ activeImg, deselectPhoto }) {
       body.style.paddingRight = "0";
       nav.classList.remove("no-scrollbar");
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

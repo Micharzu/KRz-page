@@ -5,11 +5,7 @@ import "./sheets-styles/SheetList.css";
 import Sheet from "./Sheet";
 import { BsMusicNoteList as SongListIcon } from "react-icons/bs";
 import { IconContext } from "react-icons";
-import {
-  disableBodyScroll,
-  enableBodyScroll,
-  clearAllBodyScrollLocks,
-} from "body-scroll-lock";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 
 function SheetList() {
   const songList = [
