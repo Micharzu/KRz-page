@@ -1,0 +1,80 @@
+$mark-up-color: rgb(59, 120, 253);
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: black;
+  width: 100%;
+  height: 8vh;
+  min-height: 40px;
+  color: white;
+  font-family: "CinzelDecorative-Bold";
+  font-size: medium;
+  .copyrights {
+    cursor: default;
+    margin: 0 5px;
+  }
+  .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    .mail {
+      transition: 0.2s ease-out;
+    }
+    .mail-icon {
+      margin: 0 5px;
+      transition: 0.2s ease-out;
+    }
+    &:hover {
+      .mail {
+        color: $mark-up-color;
+      }
+      .mail-icon {
+        transform: rotateZ(10deg);
+        fill: $mark-up-color;
+      }
+    }
+    .tooltip {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      background: $mark-up-color;
+      border-radius: 15px;
+      padding: 6px 14px;
+      transform: translateY(-35px);
+      transition: 1s;
+      font-family: "Langar";
+      &.opened {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  .social-media {
+    display: inherit;
+    .sm-link {
+      margin: 0 10px;
+      cursor: pointer;
+      transition: 0.15s ease-in;
+      &.yt:hover {
+        // fill: rgb(255, 84, 84);
+        fill: $mark-up-color;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .footer {
+    font-size: small;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .footer {
+    font-size: xx-small;
+  }
+}

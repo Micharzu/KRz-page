@@ -1,0 +1,89 @@
+.shadow {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shadow .window {
+  background-color: #212142;
+  padding: 10px;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "img img" "desc date";
+}
+
+.shadow .window h3 {
+  color: #cfcbec;
+  font-family: "Langar";
+  font-weight: 100;
+  padding-top: 5px;
+}
+
+.shadow .window .img-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: img;
+  min-width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.shadow .window .img-container img {
+  -webkit-animation: fadeIn 1.5s forwards;
+          animation: fadeIn 1.5s forwards;
+  max-width: 1100px;
+  max-height: 600px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.shadow .window .date {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: date;
+  text-align: right;
+  padding-left: 5px;
+}
+
+.shadow .window .desc {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: desc;
+  padding-right: 5px;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/*# sourceMappingURL=WindowImage.css.map */

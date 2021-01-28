@@ -1,0 +1,70 @@
+.home .spam {
+  padding: 2rem;
+}
+
+.home .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home .img-container .hero-image {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  overflow: hidden;
+  height: 0%;
+}
+
+.home .img-container .hero-image img {
+  position: relative;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: grayscale(0.6) contrast(1.2) brightness(0.4);
+          filter: grayscale(0.6) contrast(1.2) brightness(0.4);
+}
+
+.home .img-container .hero-image .headline {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 1.4rem;
+  letter-spacing: 1rem;
+  white-space: nowrap;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+}
+
+.home .img-container .hero-image .headline .gap {
+  width: 35%;
+}
+/*# sourceMappingURL=Home.css.map */
