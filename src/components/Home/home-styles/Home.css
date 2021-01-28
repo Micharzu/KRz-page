@@ -12,7 +12,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60vh;
+  max-height: 60vh;
   width: 100%;
   overflow: hidden;
 }
@@ -66,5 +66,26 @@
 
 .home .img-container .hero-image .headline .gap {
   width: 35%;
+}
+
+@media only screen and (max-width: 950px) {
+  .home .img-container .hero-image .headline {
+    font-size: 1rem;
+    letter-spacing: 0.7rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home .img-container .hero-image .headline {
+    font-size: 0.7rem;
+    letter-spacing: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .home .img-container .hero-image .headline {
+    font-size: 0.5rem;
+    letter-spacing: 0.4rem;
+  }
 }
 /*# sourceMappingURL=Home.css.map */
