@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/KRz-page/static/css/main.b405618f.chunk.css",
+    "main.js": "/KRz-page/static/js/main.e8bc37c5.chunk.js",
+    "main.js.map": "/KRz-page/static/js/main.e8bc37c5.chunk.js.map",
+    "runtime-main.js": "/KRz-page/static/js/runtime-main.00e3d835.js",
+    "runtime-main.js.map": "/KRz-page/static/js/runtime-main.00e3d835.js.map",
+    "static/css/2.65d2ce57.chunk.css": "/KRz-page/static/css/2.65d2ce57.chunk.css",
+    "static/js/2.4d7c92ce.chunk.js": "/KRz-page/static/js/2.4d7c92ce.chunk.js",
+    "static/js/2.4d7c92ce.chunk.js.map": "/KRz-page/static/js/2.4d7c92ce.chunk.js.map",
+    "index.html": "/KRz-page/index.html",
+    "static/css/2.65d2ce57.chunk.css.map": "/KRz-page/static/css/2.65d2ce57.chunk.css.map",
+    "static/css/main.b405618f.chunk.css.map": "/KRz-page/static/css/main.b405618f.chunk.css.map",
+    "static/js/2.4d7c92ce.chunk.js.LICENSE.txt": "/KRz-page/static/js/2.4d7c92ce.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/KRz-page/static/media/CinzelDecorative-Bold.9678a402.ttf",
+    "static/media/material-icons.css": "/KRz-page/static/media/MaterialIcons-Regular.cff684e5.woff2",
+    "static/media/random_chimp_event.3e9644ad.jpeg": "/KRz-page/static/media/random_chimp_event.3e9644ad.jpeg",
+    "static/media/test_mp3.0d659e2a.mp3": "/KRz-page/static/media/test_mp3.0d659e2a.mp3",
+    "static/media/test_pdf.e64b495e.pdf": "/KRz-page/static/media/test_pdf.e64b495e.pdf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.00e3d835.js",
+    "static/css/2.65d2ce57.chunk.css",
+    "static/js/2.4d7c92ce.chunk.js",
+    "static/css/main.b405618f.chunk.css",
+    "static/js/main.e8bc37c5.chunk.js"
+  ]
+}
