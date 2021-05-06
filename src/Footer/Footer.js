@@ -55,7 +55,8 @@ function Footer() {
             className="sm-link yt"
             onClick={() => {
               openLink(
-                "https://www.youtube.com/channel/UC6UGDdU1G_P79hZuzVjwn1A"
+                // "https://www.youtube.com/channel/UC6UGDdU1G_P79hZuzVjwn1A"
+                "https://www.youtube.com/"
               );
             }}
           />
